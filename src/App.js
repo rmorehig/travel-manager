@@ -1,21 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Travels from './components/Travels';
-import Main from './components/Main';
+import './assets/css/main.scss'
+import './App.css'
+import TravelList from './components/TravelList';
+import Travel from './components/Travel';
+import travels from './shared/travels';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import { Section } from 'bloomer'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Travel Manager
-        </p>
-      </header>
-      <Main>
-        <Travels />
-      </Main>
-    </div>
+    <>
+      <Router>
+        <header className="App-header">
+          <p>
+            Travel Manager
+          </p>
+        </header>
+        <Section>
+          <Switch>
+            <Route path="/" exact component={TravelList} />
+            <Route path="/travel" component={() => <Travel {...travels} />} />
+          </Switch>
+        </Section>
+      </Router>
+    </>
   );
 }
 
