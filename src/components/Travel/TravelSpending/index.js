@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Table, TabList, TabLink, Section, Container, Title, Box } from 'bloomer'
-import { FaHome, FaPlus } from 'react-icons/fa';
 
 const TravelSpending = () => {
     return (
@@ -31,6 +30,10 @@ const TravelSpending = () => {
                     </tr>
                     <tr>
                         <td>Activities</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr>
+                        <td>Other</td>
                         <td>1200</td>
                     </tr>
                 </tbody>

@@ -6,7 +6,7 @@ import { Level } from 'bloomer/lib/components/Level/Level';
 import TravelBoxItem from './TravelBoxItem';
 
 const TravelBox = (props) => {
-    const { title, items} = props
+    const { title, data} = props
     return (
         <Box>
             <Level>
@@ -37,7 +37,7 @@ const TravelBox = (props) => {
                 
             </Level>
             <Columns isMultiline>
-                {items.map(item => <TravelBoxItem {...item} />)}
+                {data.map(item => <TravelBoxItem {...item} />)}
             </Columns>
         </Box>
     )
