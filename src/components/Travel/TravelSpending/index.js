@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Table, TabList, TabLink, Section, Container, Title, Box } from 'bloomer'
-
+import { Table, TabList, TabLink, Section, Container, Title } from 'bloomer'
+import { Box } from '../../../utils';
 const TravelSpending = () => {
     return (
         <Box>

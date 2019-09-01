@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Panel, TabList, TabLink, Section, Container, Title, Box } from 'bloomer'
+import { Panel, TabList, TabLink, Section, Container, Title } from 'bloomer'
+import { Box, BoxTitle } from '../../../utils'
 import { FaHome, FaPlus } from 'react-icons/fa';
 
 const renderTravelTimelineItem = (cities) => (
@@ -24,10 +25,12 @@ const renderTravelTimelineItem = (cities) => (
 
 const TravelTimeline = ({cities}) => {
     return(
-        <BoxWrapper>
-            <Title>
-                Timeline
-            </Title>
+        <Box>
+            <BoxTitle>
+                <Title>
+                    Timeline
+                </Title>
+            </BoxTitle>
             <div className="steps">
                 {renderTravelTimelineItem(cities)}
                 <div class="step-item">
@@ -39,11 +42,8 @@ const TravelTimeline = ({cities}) => {
                     </div>
                 </div>
             </div>
-        </BoxWrapper>
+        </Box>
     )
 }
 
-const BoxWrapper = styled(Box)`
-    
-`
 export default TravelTimeline
